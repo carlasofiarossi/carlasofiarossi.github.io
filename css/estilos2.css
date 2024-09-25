@@ -1,0 +1,161 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.main {
+  margin: 0.5em;
+}
+
+.main__title {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.main__content {
+  display: flex; 
+  margin-top: 1em; 
+  height: 70vh; 
+}
+
+.section {
+  flex-direction: column; 
+  height: 100%; 
+  
+}
+
+@media (min-width: 768px) {
+  .section {
+    max-width: 600px; 
+    margin: auto;
+    margin-bottom: 1.5em;
+  }
+}
+
+.section__title {
+  margin-bottom: 0.5em;
+}
+
+.section-form {
+  flex: 1; 
+  background-color: #333; 
+  color: #fff; 
+  padding: 1.5em; 
+  border-radius: 10px; 
+  box-sizing: border-box; 
+  min-width: 300px; 
+}
+
+.section-list {
+  flex: 1; 
+  background-color: #333;
+  color: #fff; 
+  padding: 1.5em; 
+  border-radius: 10px; 
+  box-sizing: border-box; 
+  overflow-y: auto; 
+  min-width: 300px; 
+}
+
+.form_task {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 0.5em; 
+  margin: auto; 
+  width: 100%; 
+  max-width: 400px; 
+}
+
+.form__label {
+  align-self: center;
+  font-weight: bold;
+}
+
+.form__input {
+  flex: 1;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1em; 
+  background-color: #555; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+}
+
+.form__button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #e28dd7; 
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__button:hover {
+  background-color: #c770b8; 
+}
+
+.error {
+  text-align: center;
+  color: red;
+  margin-top: 1em;
+}
+
+.tasks__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.bx-check {
+  color: green;
+  cursor: pointer;
+}
+
+.bx-trash {
+  color: red;
+  cursor: pointer;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #444;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.tasks__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+}
+
+.tasks__item p {
+  margin: 0 1em;
+}
+
+.tasks {
+  margin-top: 1em;
+}
