@@ -39,39 +39,51 @@
         </div>
     </nav>
     <main class="main">
-      <h1 class="main__title">Productos</h1>
+      <br>
       <div class="main__content">
         <!-- Sección del formulario -->
         <section class="section section-form">
           <h2 class="section__title">Agregar productos</h2>
-          <form class="form_task">
-            <label class="form__label" for="productName">Nombre del producto:</label>
-            <input class="form__input" id="productName" type="text" placeholder="Nombre del producto" />
-    
-            <label class="form__label" for="productDescription">Descripción:</label>
-            <input class="form__input" id="productDescription" type="text" placeholder="Descripción del producto" />
-    
-            <label class="form__label" for="productBrand">Marca:</label>
-            <input class="form__input" id="productBrand" type="text" placeholder="Marca del producto" />
-    
+          <form class="form_task" id="formulario">
+            <div class="form-group">
+              <label class="form__label" for="productName">Nombre</label>
+              <input class="form__input" id="productName" type="text" placeholder="Nombre del producto" />
+            </div>
+            <div class="form-group">
+              <label class="form__label" for="productDescription">Descripción</label>
+              <input class="form__input" id="productDescription" type="text" placeholder="Descripción del producto" />
+            </div>
+            <div class="form-group">
+              <label class="form__label" for="productBrand">Marca</label>
+              <input class="form__input" id="productBrand" type="text" placeholder="Marca del producto" />
+            </div>
             <button class="form__button" type="submit">Agregar Producto</button>
           </form>
           <div class="error"></div>
+        
         </section>
         
         <!-- Sección del listado -->
-        <section class="section section-list">
+         
+        <div class="right-column">
+         
+          
+        
           <h2 class="section__title">Listado</h2>
           <div class="task-header">
             <span>ID</span>
             <span>Nombre</span>
             <span>Descripción</span>
             <span>Marca</span>
+            <span>&nbsp;</span>
           </div>
           <ul id="taskList" class="tasks">
             <!-- Los productos agregados se renderizarán aquí -->
           </ul>
-        </section>
+        </div>
+        
+        
+      </div>
       </div>
     </main>
     

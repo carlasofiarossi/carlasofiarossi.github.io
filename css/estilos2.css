@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 ul,
@@ -13,6 +14,7 @@ ol {
 
 .main {
   margin: 0.5em;
+  
 }
 
 .main__title {
@@ -21,9 +23,12 @@ ol {
 }
 
 .main__content {
-  display: flex; 
-  margin-top: 1em; 
-  height: 70vh; 
+  
+  margin-top: 1em;
+  height: 70vh; /* Mantiene un alto relativo a la ventana */
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* Los hijos ocuparán el mismo alto */
 }
 
 .section {
@@ -45,34 +50,26 @@ ol {
 }
 
 .section-form {
-  flex: 1; 
-  background-color: #333; 
-  color: #fff; 
-  padding: 1.5em; 
-  border-radius: 10px; 
-  box-sizing: border-box; 
-  min-width: 300px; 
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
-.section-list {
-  flex: 1; 
-  background-color: #333;
-  color: #fff; 
-  padding: 1.5em; 
-  border-radius: 10px; 
-  box-sizing: border-box; 
-  overflow-y: auto; 
-  min-width: 300px; 
-}
+
 
 .form_task {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 0.5em; 
-  margin: auto; 
-  width: 100%; 
-  max-width: 400px; 
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .form__label {
@@ -114,8 +111,9 @@ ol {
 
 .error {
   text-align: center;
-  color: red;
+  color: rgb(194, 86, 86);
   margin-top: 1em;
+  font-size: 11px;
 }
 
 .tasks__item {
@@ -128,34 +126,107 @@ ol {
 }
 
 .bx-check {
-  color: green;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
 .bx-trash {
-  color: red;
+  color: #c770b8;
   cursor: pointer;
 }
 
-.task-header {
+
+.task-header,
+.tasks__item {
   display: flex;
-  justify-content: space-between;
-  background-color: #444;
-  padding: 0.5em;
-  border-radius: 5px;
-  font-weight: bold;
+  justify-content: flex-start; /* Alinear a la izquierda */
+  align-items: center; /* Alinear verticalmente */
+  padding: 0.5em 1em; /* Espaciado interno */
+}
+
+.task-header span,
+.tasks__item p {
+  text-align: center; /* Centramos el texto en cada celda */
+  padding: 0.5em; /* Espaciado interno para los elementos */
+  border-right: 1px solid #555; /* Línea de separación entre columnas */
+}
+
+.task-header span:last-child,
+.tasks__item p:last-child {
+  border-right: none; /* Quitar la línea de separación en la última columna */
+}
+
+.task-header {
+  background-color: #444; /* Color de fondo para el encabezado */
+  font-weight: bold; /* Negrita para el encabezado */
+  border-radius: 5px; /* Bordes redondeados */
 }
 
 .tasks__item {
+  background-color: #333; /* Color de fondo para los elementos */
+  color: #fff; /* Color del texto */
+  border-bottom: 1px solid #555; /* Línea entre elementos */
+  padding: 0.5em 0; /* Espaciado interno */
+}
+
+.tasks__item div {
+  display: flex; /* Alinear acciones */
+  justify-content: center; /* Centrar acciones */
+  gap: 10px; /* Espacio entre íconos */
+}
+
+/* Establecer anchos diferentes para cada columna */
+.task-header span:nth-child(1),
+.tasks__item p:nth-child(1) {
+  flex: 0.5; /* Ancho menor para ID */
+}
+
+.task-header span:nth-child(2),
+.tasks__item p:nth-child(2) {
+  flex: 2; /* Ancho mayor para Nombre */
+}
+
+.task-header span:nth-child(3),
+.tasks__item p:nth-child(3) {
+  flex: 3; /* Ancho mayor para Descripción */
+}
+
+.task-header span:nth-child(4),
+.tasks__item p:nth-child(4) {
+  flex: 2; /* Ancho intermedio para Marca */
+}
+
+.task-header span:nth-child(5),
+.tasks__item p:nth-child(5) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+
+.tasks__item div {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+}
+
+.task-header {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tasks__item {
+  background-color: #333;
+  color: #fff;
+  border-bottom: 1px solid #555;
   padding: 0.5em 0;
 }
 
-.tasks__item p {
-  margin: 0 1em;
-}
-
-.tasks {
-  margin-top: 1em;
+.right-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff; 
+  border-radius: 10px; 
+  overflow-y: auto; 
+  height: 437px;
 }
