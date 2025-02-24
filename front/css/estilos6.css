@@ -1,0 +1,18 @@
+
+  .hero-text h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+
+  
+  .hero-text a:hover {
+    background-color: #f3abd7;
+  }
+  

@@ -1,0 +1,617 @@
+.small-text {
+  font-size: 14px; /* Cambia este valor según el tamaño que necesites */
+}
+
+/* Agrega una línea divisoria entre cada fila */
+.table-usuarios tbody tr {
+  border-bottom: 1px solid #ffffff; /* Color y grosor de la línea */
+}
+
+/* Opcional: Eliminar la línea del último elemento */
+.table-usuarios tbody tr:last-child {
+  border-bottom: none;
+}
+
+.form__input4 {
+    width: 100%;
+    margin-bottom: 1em; 
+    background-color: #555; 
+    color: #fff;
+    border-radius: 5px; 
+    border: 1px solid #ccc; /* Añade un borde */
+    height: 80px; /* Ajusta la altura según lo necesites */
+    padding: 10px; /* Espaciado interno para hacerlo más cómodo */
+  }
+  
+  /* Establecer anchos diferentes para cada columna */
+.task-header span:nth-child(1),
+.tasks__item p:nth-child(1) {
+  flex: 1; /* Ancho menor para ID */
+}
+
+.task-header span:nth-child(2),
+.tasks__item p:nth-child(2) {
+  flex: 2; /* Ancho mayor para Nombre */
+}
+
+.task-header span:nth-child(3),
+.tasks__item p:nth-child(3) {
+  flex: 3; /* Ancho mayor para Descripción */
+}
+
+.task-header span:nth-child(4),
+.tasks__item p:nth-child(4) {
+  flex: 4; /* Ancho intermedio para Marca */
+}
+
+.task-header span:nth-child(5),
+.tasks__item p:nth-child(5) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+.task-header span:nth-child(6),
+.tasks__item p:nth-child(6) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+.task-header span:nth-child(7),
+.tasks__item p:nth-child(7) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+.task-header span:nth-child(8),
+.tasks__item p:nth-child(8) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+.task-header span:nth-child(9),
+.tasks__item p:nth-child(9) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.main {
+  margin: 0.5em;
+  flex: 1;
+  
+}
+
+.main__title {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.main__content {
+  
+  margin-top: 1em;
+  height:auto;
+  display: flex;
+  flex: 1; /* Hace que esta sección ocupe el espacio disponible */
+  gap: 10px;
+  
+   
+  
+  
+}
+
+
+
+
+.section {
+  flex-direction: column; 
+  height: 100%; 
+  
+}
+
+
+
+.section__title {
+  margin-bottom: 0.5em;
+}
+
+.section-form {
+  flex: 2;
+  background-color: #111111;
+  color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc; /* Opcional: solo para visualizar mejor el área */
+  
+}
+
+
+
+.form_task {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form__label {
+  align-self: center;
+  font-size:small ;
+}
+
+
+
+.input-busqueda{
+  width: 600px;
+  margin-bottom: 1em; 
+  background-color: #555; 
+  color: #fff; 
+  border-radius: 5px; 
+  padding: 10px; /* Añade padding para mejor apariencia */
+  text-align: center; /* Centra el texto dentro del campo */
+  border: 1px solid #ccc; /* Añade un borde */
+  box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el ancho del elemento */
+  
+}
+
+
+
+.form__input{
+  width: 86%;
+  padding: 5px;
+  margin-bottom: 1em; 
+  background-color: #555; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+  border: 1px solid #ccc; /* Añade un borde */
+}
+.form__input2 {
+  
+  width: 30px;
+  padding: 5px;
+  margin-bottom: 1em; 
+  background-color: #555; 
+  color: #fff; 
+ 
+  border-radius: 5px; 
+  flex: 1;
+  border: 1px solid #ccc; /* Añade un borde */
+}
+.form__input3{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 1em; 
+  background-color: #555; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+  border: 1px solid #ccc; /* Añade un borde */
+}
+
+
+.form__button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #411168; 
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form__button:hover {
+  background-color: #b2297d; 
+}
+
+.error {
+  text-align: center;
+  color: rgb(194, 86, 86);
+  margin-top: 1em;
+  font-size: 11px;
+}
+
+.tasks__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.bx-check {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.bx-trash {
+  color: #b2297d;
+  cursor: pointer;
+}
+
+
+.task-header,
+.tasks__item {
+  display: flex;
+  justify-content: flex-start; /* Alinear a la izquierda */
+  align-items: center; /* Alinear verticalmente */
+  padding: 0.5em 1em; /* Espaciado interno */
+}
+
+.task-header span,
+.tasks__item p {
+  text-align: center; /* Centramos el texto en cada celda */
+  padding: 0.5em; /* Espaciado interno para los elementos */
+  border-right: 1px solid #555; /* Línea de separación entre columnas */
+}
+
+.task-header span:last-child,
+.tasks__item p:last-child {
+  border-right: none; /* Quitar la línea de separación en la última columna */
+}
+
+.task-header {
+  background-color: #444; /* Color de fondo para el encabezado */
+  font-weight: bold; /* Negrita para el encabezado */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.tasks__item {
+  background-color: #111111; /* Color de fondo para los elementos */
+  color: #fff; /* Color del texto */
+  border-bottom: 1px solid #555; /* Línea entre elementos */
+  padding: 0.5em 0; /* Espaciado interno */
+}
+
+.tasks__item div {
+  display: flex; /* Alinear acciones */
+  justify-content: center; /* Centrar acciones */
+  gap: 10px; /* Espacio entre íconos */
+}
+
+/* Establecer anchos diferentes para cada columna */
+.task-header span:nth-child(1),
+.tasks__item p:nth-child(1) {
+  flex: 0.5; /* Ancho menor para ID */
+}
+
+.task-header span:nth-child(2),
+.tasks__item p:nth-child(2) {
+  flex: 2; /* Ancho mayor para Nombre */
+}
+
+.task-header span:nth-child(3),
+.tasks__item p:nth-child(3) {
+  flex: 3; /* Ancho mayor para Descripción */
+}
+
+.task-header span:nth-child(4),
+.tasks__item p:nth-child(4) {
+  flex: 2; /* Ancho intermedio para Marca */
+}
+
+.task-header span:nth-child(5),
+.tasks__item p:nth-child(5) {
+  flex: 0.1; /* Ancho menor para Acciones */
+}
+
+.tasks__item div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.task-header {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tasks__item {
+  background-color: #111111;
+  color: #fff;
+  border-bottom: 1px solid #555;
+  padding: 0.5em 0;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  background-color: #111111;
+  color: #fff; 
+  border-radius: 10px; 
+  overflow-y: auto; 
+  max-height: 800px; /* Ajusta la altura según sea necesario */
+  overflow-y: auto; /* Activa el scroll cuando el contenido sea mayor que la altura */
+  border: 1px solid #ccc; /* Opcional: solo para visualizar mejor el área */
+  padding: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin; /* Para Firefox */
+  scrollbar-color: #ccc transparent; /* Color del scroll y del fondo */
+  
+}
+
+/* Ocultar menú en pantallas pequeñas */
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menú */
+.menu-items {
+  display: flex;
+  list-style: none;
+}
+
+.menu-items li {
+  margin: 0 10px;
+}
+
+.menu-items a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menú inicial: oculto por defecto */
+  .menu-items {
+    display: none;
+    flex-direction: column; /* Cambiar a disposición vertical */
+    width: 100%; /* Ocupa el ancho del navbar */
+    background-color: #000; /* Fondo negro */
+  }
+
+  .menu-items.active {
+    display: flex; /* Mostrar menú al activarlo */
+  }
+
+  .menu-items li {
+    margin: 10px 0; /* Espaciado entre opciones */
+    text-align: center;
+    position: relative; /* Necesario para posicionar la flecha */
+  }
+
+  /* Estilo de los enlaces dentro del menú */
+  .menu-items a {
+    font-size: 1rem; /* Tamaño del texto */
+    color: white;
+    text-decoration: none;
+    padding: 10px; /* Espaciado interno */
+    display: block; /* Ocupa toda la línea */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el cursor */
+  }
+
+  /* Fondo igual al actual al hacer hover */
+  .menu-items a:hover {
+    background-color: #333; /* Fondo al pasar el cursor */
+  }
+
+  /* Añadir flecha solo para las opciones con submenú */
+  .menu-items li.dropdown > a::after {
+    content: ' ▼'; /* Flecha hacia abajo */
+    font-size: 0.8rem;
+    margin-left: 5px; /* Espacio entre el texto y la flecha */
+  }
+
+  /* Si quieres cambiar el color de la flecha al hacer hover */
+  .menu-items a:hover::after {
+    color: #b2297d; /* Cambia a otro color al hacer hover */
+  }
+}
+
+
+
+.table-usuarios {
+  width: 100%;
+  color: #e4e4e4;
+  border: 1px solid #0b0d16;
+  border-radius: 0.3rem;
+  
+}
+
+.table-usuarios thead {
+  background-color: #391153;
+  height: 1.5rem;
+  border-color: 2px solid #e4e4e4;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 0.5rem;
+  font-size: 25px;
+  text-align: center;
+  color: #e4e4e4;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+
+
+
+
+.container-search .search-content {
+  display: block;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.container-search.minimized .search-content {
+  display: none;
+}
+
+.toggle-button {
+  width: 40px; /* Ancho fijo */
+  height: 40px; /* Alto fijo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* Tamaño del texto */
+  font-weight: bold;
+  background-color: #391153;
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Forma circular */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #b2297d; /* Color al pasar el mouse */
+}
+
+
+.toggle-button {
+  padding: 5px 10px;
+  background-color: #b2297d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #391153;
+}
+
+.line-button {
+  display: block;
+  width: 40px; /* Ancho de la línea */
+  height: 1px; /* Alto de la línea */
+  margin: 1px auto; /* Centra horizontalmente */
+  background-color: #000; /* Color de la línea */
+  border: none; /* Elimina el borde */
+  cursor: pointer; /* Cursor de mano al pasar */
+  transition: transform 0.3s ease; /* Transición para la animación */
+}
+
+.line-button:hover {
+  background-color: #555; /* Cambia el color al pasar el mouse */
+}
+
+.line-button.expanded {
+  transform: rotate(90deg); /* Rota la línea cuando está expandido */
+}
+
+.container-search button {
+  padding: 10px;
+  background-color: #391153;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 7px;
+  display: inline-flex;
+}
+
+.container-search button:hover {
+  background-color: #b2297d
+}
+
+
+
+
+.table-usuarios {
+  width: 100%;
+  color: #e4e4e4;
+  border: 1px solid #0b0d16;
+  border-radius: 0.3rem;
+}
+
+/* Estilo del Modal */
+.modal {
+  display: none; /* Por defecto el modal está oculto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal input[type="text"],
+.modal input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5e5858;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #b2297d;
+}

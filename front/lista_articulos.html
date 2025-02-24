@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado Marcas</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+ 
+    <link rel="stylesheet" href="./css/estilos4.css" />
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div id="navbar-container"></div>
+  </nav>
+    <main class="main">
+
+      <div class="main__content">
+        <!-- Sección del formulario -->
+        <section class="section section-form">
+          <h3 class="section__title">Productos</h3>
+          <form class="form_task" id="formulario">
+            <div class="form-group">
+              <label class="form__label" for="productName">Ingrese el nombre del artículo</label><br>
+              <label for="articleID"></label><input type="text" id="articleID" class="form__input2" readonly>
+              <input class="form__input3" id="productName" type="text" placeholder="Nombre del artículo" />
+          
+              <label for="categoria" class="form__label">Seleccione una categoría:</label>
+              <select id="categoria" class="form__input3">
+                  <option value="">Seleccione una opción</option>
+                  <!-- Opciones se cargarán dinámicamente -->
+              </select>
+              
+              <label for="subcategoria" class="form__label">Seleccione una subcategoría:</label>
+              <select id="subcategoria" class="form__input3" disabled>
+                  <option value="">Seleccione una opción</option>
+              </select>
+              
+              <label for="tipo" class="form__label">Seleccione el tipo de artículo:</label>
+              <select id="tipo" class="form__input3" disabled>
+                  <option value="">Seleccione una opción</option>
+              </select>
+          
+              <label for="marca" class="form__label">Seleccione la marca:</label>
+              <select id="marca" class="form__input3">
+                <option value="">Seleccione una opción</option>
+                <!-- Opciones se cargarán dinámicamente -->
+              </select>
+          
+              <label class="form__label" for="productDescripcion">Descripción</label>
+              <textarea class="form__input4" id="productDescripcion" placeholder="Descripción del producto"></textarea>
+          
+              <label class="form__label" for="productPrecio">Ingrese el precio</label>
+              <input class="form__input3" id="productPrecio" type="text" placeholder="Precio del artículo" />
+              <label for="image">Imagen del producto:</label> 
+              <input type="file" id="image" name="imagen" accept="image/*" onchange="previewProductImage(event)">
+              <br><br>
+              
+              <!-- Vista previa de la imagen -->
+              <img id="productPreview" src="" alt="Vista previa de la imagen" style="display:none; max-width: 100px; margin-top: 10px;">
+              
+            </div>
+            
+            <button type="button" id="btnGuardar" class="form__button">Guardar Artículo</button>
+            <button type="button" class="form__button" id="btnCancelar" style="display: none;">
+              Cancelar
+            </button>
+          </form>
+          
+          <div class="error"></div>
+        
+        </section>
+
+
+        <!-- Sección del listado -->
+        <div class="right-column">
+          <div class="container-search">
+          
+              <button class="toggle-button" id="toggle-search">─</button>
+              <div class="search-content">
+           <h3>Buscar POR ID</h3>
+           <center>
+            <input id="input-busqueda" class="input-busqueda" placeholder="Ingrese el ID del artículo"/><br />
+<button id="buscarElemento">Buscar</button>
+
+             <button id="btn-mostrarElemento">Mostrar Todos</button>
+           </center>
+         </div>
+          </div>
+          
+          
+  <br>
+          <div class="container-data-list">
+              <h3>Listado</h3>
+              <table id="table-usuarios" class="table-usuarios">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>NOMBRE</th>
+                          <th>CATEGORIA</th>
+                          <th>SUBCATEGORIA</th>
+                          <th>&nbsp TIPO &nbsp</th>
+                          <th>MARCA</th>
+                          <th>DESCRIP.</th>
+                          <th>PRECIO</th>
+                          <th>IMAGEN</th>
+                          <th>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+                          <tbody></tbody> <!-- Aquí se agregan las filas dinámicamente -->
+                      </tr>
+                  </thead>
+                  
+              </table>           
+          </div>
+      </div>
+      </div>
+        
+        
+      </div>
+      </div>
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-left">
+                  <small>&copy; 2024 MEKUMI. </small>
+              </div>
+              <div class="footer-right">
+                  <a href=https://www.facebook.com><div class="social-icons"><img src="imagenes/icono1.png"></a>
+                      <a href=https://www.instagram.com><img src="imagenes/icono2.png"></a>
+                      <a href=https://www.whatsapp.com><img src="imagenes/icono3.png"></a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+    <script src="./js/eventos.js"></script>
+    <script src="./js/eventos9.js"></script>
+    <script src="./js/eventos-reg.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </body>
+</html>

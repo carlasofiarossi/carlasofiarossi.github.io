@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado usuarios</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./css/estilos5.css" />
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div id="navbar-container"></div>
+  </nav>
+
+    <main class="main">
+      <div class="main__content">
+        <!-- Sección del formulario -->
+        <section class="section section-form">
+          <h3 class="section__title">EDITAR usuarios</h3>
+          <form class="form_task" id="formulario">
+            <div class="form-group">
+                <br><label class="form__label" for="userName">Ingrese el nombré del usuario.</label><br>
+                <label for="userID"></label><input type="text" id="userID" class="form__input2" readonly>
+                <input class="form__input" id="userName" type="text" placeholder="Nombre del usuario" />
+<label class="form__label" for="userSurname">Ingrese el apellido del usuario.</label><br>
+
+                <input class="form__input3" id="userSurame" type="text" placeholder="Apellido del usuario" /><br>
+
+                <label for="userProvince" class="form__label">Seleccione una provincia</label>
+                <select id="userProvince" class="form__input3">
+                  <option value="">Seleccione una opción</option>
+                  <!-- Opciones se cargarán dinámicamente -->
+                </select>
+            
+            
+                <label for="userPronoun" class="form__label">Seleccione un pronombre</label>
+                <select id="userPronoun" class="form__input3">
+                  <option value="">Seleccione una opción</option>
+                  <!-- Opciones se cargarán dinámicamente -->
+                </select>
+            
+            
+                <label class="form__label" for="userCellphone">Ingrese el celular del usuario.</label><br>
+                <input class="form__input3" id="userCellphone" type="number" placeholder="Celular del usuario" /><br>
+            
+                <label class="form__label" for="userMail">Ingrese el mail del usuario.</label><br>
+                <input class="form__input3" id="userMail" type="email" placeholder="Mail del usuario" /><br>
+            
+            
+                <label class="form__label" for="userPassword">Contraseña del usuario.</label><br>
+                <input class="form__input3" id="userPassword" type="password" placeholder="Nueva contraseña del usuario" /><br>
+            
+                <label for="image">Imagen de Perfil:</label>
+                <input type="file" id="image" name="imagen" accept="image/*" onchange="previewProfileImage(event)">
+                
+                <!-- Contenedor de la vista previa -->
+                <div id="image-preview-container">
+                    <img id="image-preview" src="" alt="Imagen de Perfil Actual" style="display: none; max-width: 150px; margin-top: 10px;">
+                </div>
+                
+                
+
+<br><br>
+<button type="button" id="btnActualizar" class="form__button" disabled>Actualizar Usuario</button>
+
+<br>
+              
+            </div>
+          </form>
+          <div class="error"></div>
+        </section>
+
+        <!-- Sección del listado -->
+        <div class="right-column">
+          <div class="container-search"> 
+               <button class="toggle-button" id="toggle-search">─</button>
+               <div class="search-content">
+            <h3>Buscar POR ID</h3>
+            <center>
+              <input id="input-busqueda" class="input-busqueda" placeholder="Ingrese el ID del usuario"/><br />
+              <button id="buscarElemento">Buscar</button>
+              <button id="btn-mostrarElemento">Mostrar Todos</button>
+            </center>
+          </div>
+          </div>
+  
+          <div class="container-data-list">
+            <h3>Listado</h3>
+            <table id="table-usuarios" class="table-usuarios">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>APELLIDO</th>
+                  <th>PROVINCIA</th>
+                  <th>PRONOMBRE</th>
+                  <th>CELULAR</th>
+                  <th>MAIL</th>
+                  <th>CONTRASEÑA</th>
+                  <th>IMAGEN</th>
+                  <th> &nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Aquí se cargarán los usuarios -->
+              </tbody>
+            </table>
+           
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="imageModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" class="modal-content" alt="Imagen en grande">
+        <div id="caption"></div>
+      </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <small>&copy; 2024 MEKUMI.</small>
+          </div>
+          <div class="footer-right">
+            <div class="social-icons">
+              <a href="https://www.facebook.com">
+                <img src="imagenes/icono1.png" alt="Facebook" />
+              </a>
+              <a href="https://www.instagram.com">
+                <img src="imagenes/icono2.png" alt="Instagram" />
+              </a>
+              <a href="https://www.whatsapp.com">
+                <img src="imagenes/icono3.png" alt="WhatsApp" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/eventos.js"></script>
+    <script src="./js/eventos10.js"></script>
+    <script src="./js/eventos-reg.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
